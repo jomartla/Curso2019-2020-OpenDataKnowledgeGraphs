@@ -38,7 +38,19 @@ public class Task01
 		model.write(System.out);
 
 		// ** TASK 1.1: Now write the model in Turtle form **
+		//If we change the second parameter, we can change de RDFFormat.
 		model.write(System.out, "TURTLE");
+		//model.write(System.out, "JSONLD");
+		/*
+		 * Jena writer name - RIOT RDFFormat
+		 * TTL - TURTLE
+		 * TURTLE - TURTLE
+		 * Turtle - TURTLE
+		 * N-TRIPLE - NTRIPLES
+		 * NT-TRIPLE
+		 */
+		
+		
 		
 		// ** TASK 1.2: Read a new model and merge it with the previous one **
 		String filename2 = "resources/example2.rdf";
