@@ -46,8 +46,8 @@ public class Task02
 		janeSmith.addLiteral(VCARD.EMAIL, "jSmith@somewhere.com");
 
 		// ** TASK 2.3: Add Jane as a person who John knows through an object property from the FOAF vocabulary**
-		Property knows = model.createProperty(foafNS+"knows");
-		johnSmith.addProperty(knows, janeSmith);
+//				Property knows = model.createProperty(foafNS+"knows");
+//				johnSmith.addProperty(knows, janeSmith);
 
 		johnSmith.addProperty(FOAF.knows, janeSmith);
 
