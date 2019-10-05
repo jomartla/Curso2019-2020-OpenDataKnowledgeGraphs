@@ -26,3 +26,13 @@ This is the directory where students have to upload their materials related to t
 * /ontology/*.ttl - An OWL file (using the Turtle syntax) with the ontology developed, according to the resource naming strategy defined.
 * /selfAssessmentHandsOn2.md - A Markdown document with the hands-on 2 self-assessment
 
+Includes the names and GitHub users of all the members of the group:
+#Jorge Martin Lasaosa .jomartla
+#Wladyslaw Eysymontt .weysymontt
+#Juan Luis Ruiz-Tagle Oriol .juanluisrto
+#Mateusz FULL NAME .GITHUBUSERNAME
+#Artjom Poljakow .APoljakow
+
+
+
+
