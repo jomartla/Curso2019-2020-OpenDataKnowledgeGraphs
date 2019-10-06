@@ -1,1 +1,0 @@
-The filtered version includes any entry which has non zero values in at least one column starting  from the7th (VEL_0-10 column)
