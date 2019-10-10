@@ -70,7 +70,7 @@ public class Task06 {
 		
 		//Then, we look for John Smith
 		Individual johnSmith = model.getIndividual(ns + "JohnSmith");
-		johnSmith.addLiteral(worksIn, UPM);
+		johnSmith.addProperty(worksIn, UPM);
 
 		model.write(System.out, "RDF/XML-ABBREV");
 	}

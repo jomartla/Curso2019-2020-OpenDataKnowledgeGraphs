@@ -1,12 +1,18 @@
 package upm.oeg.wsld.jena;
 
 import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.Iterator;
 
 import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.reasoner.Derivation;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.util.iterator.ExtendedIterator;
 
@@ -60,6 +66,21 @@ public class Task07
 		// ** TASK 7.3: Make the necessary changes 
 		// to get as well indirect instances and subclasses. 
 		// TIP: you need some inference... **
+		
+		InfModel inf = ModelFactory.createRDFSModel(model);
+		
+		PrintWriter out = new PrintWriter(System.out);
+		for (StmtIterator i = inf.listStatements(); i.hasNext(); ) {
+		    Statement s = i.nextStatement();
+		    System.out.println("Statement is " + s);
+		    for (Iterator id = inf.getDerivation(s); id.hasNext(); ) {
+		        Derivation deriv = (Derivation) id.next();
+		        deriv.printTrace(out, true);
+		    }
+		}
+		out.flush();
+		
+		/*
 		ExtendedIterator<OntClass> listSubClasses = person.listSubClasses();
 
 		while (listSubClasses.hasNext())
@@ -74,5 +95,6 @@ public class Task07
 				System.out.println("Subclass of Person: "+subClass.getURI() + " -> Instance of Subclass: " + instance.getURI());
 			}
 		}
+		*/
 	}
 }
